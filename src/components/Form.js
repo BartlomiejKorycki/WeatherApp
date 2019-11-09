@@ -2,12 +2,10 @@ import React from 'react';
 
 const Form = props => {
     return (
-        <form 
-        className="input-group mb-3"
-        onSubmit={props.submit}>
+        <form className="input-group" onSubmit={props.submit}>
             <input 
             type="text" 
-            className="form-control" 
+            className="form-control text-center" 
             id="city-name" 
             placeholder="City name" 
             value={props.value}
