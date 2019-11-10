@@ -7,26 +7,31 @@ const Result = props => {
 //--Startowy stan aplikacji--//
     let content = null;
 
+    var number = temp;
+    var roundedNumber = Math.round(number, 0);
+
 //--Jeżeli nie ma błędu i jest podane city to...--//
     if (!err && city) {
         const sunriseTime = new Date(sunrise * 1000).toLocaleTimeString()
         const sunsetTime = new Date(sunset * 1000).toLocaleTimeString()
+        
         let image = 'http://openweathermap.org/img/wn/'+ img +'@2x.png';
 
         content = (
             <>
             <section className="city-section row">
-                <p className="h1 col-sm"><em>{city}</em></p>
-                <p className="col-sm"><img className="image" src={image} alt={description}></img></p>
-                <p className="col-sm text-center"><i className="fas fa-temperature-low"></i>{temp} &#176;C</p>
+                <p className="h1 col-sm text-capitalize"><dt>{city}</dt></p>
+                <div className="col-sm">
+                    <p className="text-center"><img className="image" src={image} alt={description}></img></p>
+                    <p className="h2 col-sm text-center">{roundedNumber} &#176;C</p>
+                </div>
             </section>
-                
-                
-                <h4><i className="fas fa-wind"></i>{wind} m/s</h4>
-                <h4>Humidity: {humidity} %</h4>
-                <h4>Pressure: {pressure} hPa</h4>
-                <h4>Sunrise: {sunriseTime}</h4>
-                <h4>Sunset: {sunsetTime}</h4>
+            <br></br>
+                <h5>Wind: {wind} m/s</h5>
+                <h5>Humidity: {humidity} %</h5>
+                <h5>Pressure: {pressure} hPa</h5>
+                <h5>Sunrise: {sunriseTime}</h5>
+                <h5>Sunset: {sunsetTime}</h5>
             </>
         )
     }

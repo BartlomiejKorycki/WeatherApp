@@ -3,6 +3,8 @@ html {
     height: 100%;
 }
 body {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
     background: url(background.jpg) no-repeat fixed center;
 }
 .result {
@@ -15,4 +17,11 @@ body {
     padding-top: 5%;
     margin: auto;
     width: 80%;
+}
+dt {
+    padding-top:10%;
+}
+h5 {
+    margin: 0;
+    padding: 8px 0px 8px 0px;
 }
