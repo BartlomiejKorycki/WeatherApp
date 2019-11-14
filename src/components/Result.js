@@ -69,22 +69,22 @@ const Result = props => {
                     </div>
                 </section>
                 <section className="forecast-weather">
-                    <div className="one">
+                    <div className="one row">
                         <p>{days[thatDayOne]}</p>
                         <p>{Math.round(forecastFirstDay, 0)} &#176;C</p>
                         <p>{Math.round(forecastFirstNight, 0)} &#176;C</p>
                     </div>
-                    <div className="two">
+                    <div className="two row">
                         <p>{days[thatDayTwo]}</p>
                         <p>{Math.round(forecastSecondDay, 0)} &#176;C</p>
                         <p>{Math.round(forecastSecondNight, 0)} &#176;C</p>
                     </div>
-                    <div className="three">
+                    <div className="three row">
                         <p>{days[thatDayThree]}</p>
                         <p>{Math.round(forecastThirdDay, 0)} &#176;C</p>
                         <p>{Math.round(forecastThirdNight, 0)} &#176;C</p>
                     </div>
-                    <div className="four">
+                    <div className="four row">
                         <p>{days[thatDayFour]}</p>
                         <p>{Math.round(forecastFourthDay, 0)} &#176;C</p>
                         <p>{Math.round(forecastFourthNight, 0)} &#176;C</p>
