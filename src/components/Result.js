@@ -3,27 +3,11 @@ import React from 'react';
 const Result = props => {
 
     const {
-        city, 
-        sunrise, 
-        sunset, 
-        temp, 
-        humidity, 
-        pressure, 
-        wind, 
-        description, 
-        img, 
-        dayNameOne, 
-        forecastFirstDay,
-        forecastFirstNight,
-        dayNameTwo,
-        forecastSecondDay,
-        forecastSecondNight,
-        dayNameThree,
-        forecastThirdDay,
-        forecastThirdNight,
-        dayNameFour,
-        forecastFourthDay,
-        forecastFourthNight,
+        city, sunrise, sunset, temp, humidity, pressure, wind, description, img, 
+        dayNameOne, forecastFirstDay,forecastFirstNight,
+        dayNameTwo,forecastSecondDay,forecastSecondNight,
+        dayNameThree,forecastThirdDay,forecastThirdNight,
+        dayNameFour,forecastFourthDay,forecastFourthNight,
         err} = props.weather;
 //--Startowy stan aplikacji--//
     let content = null;
@@ -52,7 +36,7 @@ const Result = props => {
 
         content = (
             <>
-                <section className="row">
+                <section className="row main-section">
                     <div className="city-section col">
                         <p className="h1 text-capitalize"><dt>{city}</dt></p>
                         <div className="row">
@@ -69,25 +53,21 @@ const Result = props => {
                     </div>
                 </section>
                 <section className="forecast-weather">
-                    <div className="one row">
-                        <p>{days[thatDayOne]}</p>
-                        <p>{Math.round(forecastFirstDay, 0)} &#176;C</p>
-                        <p>{Math.round(forecastFirstNight, 0)} &#176;C</p>
+                    <div className="one row justify-content-center">
+                        <p className="text-left f-w">{days[thatDayOne]}</p>
+                        <p className="text-right f-w">{Math.round(forecastFirstDay, 0)} &#176;C | {Math.round(forecastFirstNight, 0)} &#176;C</p>
                     </div>
-                    <div className="two row">
-                        <p>{days[thatDayTwo]}</p>
-                        <p>{Math.round(forecastSecondDay, 0)} &#176;C</p>
-                        <p>{Math.round(forecastSecondNight, 0)} &#176;C</p>
+                    <div className="two row justify-content-center">
+                        <p className="text-left f-w">{days[thatDayTwo]}</p>
+                        <p className="text-right f-w">{Math.round(forecastSecondDay, 0)} &#176;C | {Math.round(forecastSecondNight, 0)} &#176;C</p>
                     </div>
-                    <div className="three row">
-                        <p>{days[thatDayThree]}</p>
-                        <p>{Math.round(forecastThirdDay, 0)} &#176;C</p>
-                        <p>{Math.round(forecastThirdNight, 0)} &#176;C</p>
+                    <div className="three row justify-content-center">
+                        <p className="text-left f-w">{days[thatDayThree]}</p>
+                        <p className="text-right f-w">{Math.round(forecastThirdDay, 0)} &#176;C | {Math.round(forecastThirdNight, 0)} &#176;C</p>
                     </div>
-                    <div className="four row">
-                        <p>{days[thatDayFour]}</p>
-                        <p>{Math.round(forecastFourthDay, 0)} &#176;C</p>
-                        <p>{Math.round(forecastFourthNight, 0)} &#176;C</p>
+                    <div className="four row justify-content-center">
+                        <p className="text-left f-w">{days[thatDayFour]}</p>
+                        <p className="text-right f-w">{Math.round(forecastFourthDay, 0)} &#176;C | {Math.round(forecastFourthNight, 0)} &#176;C</p>
                     </div>
                 </section>
             </>

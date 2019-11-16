@@ -9,14 +9,14 @@ body {
 }
 .result {
     margin: auto;
-    padding: 10% 0% 0% 0%;
-    width: 100%;
+    padding-top: 5%;
+    width: 60%;
     height: 100%;
 }
 .input-group {
     padding-top: 5%;
     margin: auto;
-    width: 80%;
+    width: 30%;
 }
 h5 {
     margin: 0;
@@ -28,4 +28,13 @@ h5 {
 }
 .image {
     padding: 0;
+}
+p {
+    width: 30%;
+}
+.main-section {
+    margin-bottom: 10%;
+}
+.f-w {
+    margin-bottom: 5%;
 }
