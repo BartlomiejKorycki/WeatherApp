@@ -36,18 +36,27 @@ const Result = props => {
 
         content = (
             <>
+            <div className="h1 city-name">
+                <dt className="text-capitalize">{city}</dt>
+                <div className="row city-data text-center">
+                    <h6>{pressure} hPa </h6>
+                    <h6>{ description}</h6>
+                </div>
+            </div>
                 <section className="row main-section">
-                    <div className="city-section col">
-                        <p className="h1 text-capitalize"><dt>{city}</dt></p>
-                        <div className="row">
+                    <div className="temp-section col">
+                        <div className="col">
                             <p className="temperature col text-center">{roundedNumber} &#176;C</p>
-                            <p className="image col text-center"><img src={image} alt={description}></img></p>
+                            <div className="row temp-data">
+                                <div className="col wind">Wind: {roundedWind} m/s</div>
+                                <div className=" col humidity">Humidity: {humidity} %</div>
+                            </div>
                         </div>
                     </div>
                     <div className="details col-md">
-                        <h5>Wind: {roundedWind} m/s</h5>
-                        <h5>Humidity: {humidity} %</h5>
-                        <h5>Pressure: {pressure} hPa</h5>
+                        <p className="image col text-center">
+                            <img src={image} alt={description}></img>
+                        </p>
                         <h5>Sunrise: {sunriseTime}</h5>
                         <h5>Sunset: {sunsetTime}</h5>
                     </div>
