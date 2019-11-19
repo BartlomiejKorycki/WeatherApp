@@ -36,13 +36,14 @@ const Result = props => {
 
         content = (
             <>
-            <div className="h1 city-name">
-                <dt className="text-capitalize">{city}</dt>
-                <div className="row city-data text-center">
+                <div className="h1 city-name">
+                    <dt className="text-capitalize">{city}</dt>
+                    <div className="row city-data text-center">
+                    <img src="./svg/pressure.svg" alt="pressure"></img>
                     <h6>{pressure} hPa </h6>
-                    <h6>{ description}</h6>
+                        <h6>{ description}</h6>
+                    </div>
                 </div>
-            </div>
                 <section className="row main-section">
                     <div className="temp-section col">
                         <div className="col">
