@@ -1,4 +1,11 @@
 import React from 'react';
+import pressuree from './svg/0pressure.svg';
+import humidityy from './svg/0humidity.svg';
+import sunrisee from './svg/0sunrise.svg';
+import sunsett from './svg/0sunset.svg';
+import thermometer from './svg/0thermometer.svg';
+import windd from './svg/0wind.svg';
+import overcast from './svg/04n.svg';
 
 const Result = props => {
 
@@ -31,17 +38,16 @@ const Result = props => {
     if (!err && city) {
         const sunriseTime = new Date(sunrise * 1000).toLocaleTimeString()
         const sunsetTime = new Date(sunset * 1000).toLocaleTimeString()
-//--Adres do grafik--//
-        let image = 'http://openweathermap.org/img/wn/'+ img +'@2x.png';
+    
+    let image = img+".svg";
 
         content = (
-            <>
+            <>  
                 <div className="h1 city-name">
                     <dt className="text-capitalize">{city}</dt>
                     <div className="row city-data text-center">
-                    <img src="./svg/pressure.svg" alt="pressure"></img>
-                    <h6>{pressure} hPa </h6>
-                        <h6>{ description}</h6>
+                        <h6>{pressure} hPa </h6>
+                        <h6 className="text-capitalize">{description}</h6>
                     </div>
                 </div>
                 <section className="row main-section">
@@ -49,14 +55,14 @@ const Result = props => {
                         <div className="col">
                             <p className="temperature col text-center">{roundedNumber} &#176;C</p>
                             <div className="row temp-data">
-                                <div className="col wind">Wind: {roundedWind} m/s</div>
-                                <div className=" col humidity">Humidity: {humidity} %</div>
+                                <div className="col wind"><img className="windsvg" src={windd} alt="wind"></img>{roundedWind} m/s</div>
+                                <div className=" col humidity"><img className="humiditysvg" src={humidityy} alt="humidity"></img> {humidity} %</div>
                             </div>
                         </div>
                     </div>
                     <div className="details col-md">
                         <p className="image col text-center">
-                            <img src={image} alt={description}></img>
+                            <img src={overcast} alt={description}></img>
                         </p>
                         <h5>Sunrise: {sunriseTime}</h5>
                         <h5>Sunset: {sunsetTime}</h5>

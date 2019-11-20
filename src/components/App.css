@@ -50,3 +50,11 @@ h5 {
     margin-bottom: 5%;
     width: 40%;
 }
+/*------*/
+
+.windsvg {
+    width: 20%;
+}
+.humiditysvg {
+    width: 20%;
+}
