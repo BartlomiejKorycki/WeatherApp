@@ -1,11 +1,10 @@
 import React from 'react';
-import pressuree from './svg/0pressure.svg';
 import humidityy from './svg/0humidity.svg';
 import sunrisee from './svg/0sunrise.svg';
 import sunsett from './svg/0sunset.svg';
-import thermometer from './svg/0thermometer.svg';
 import windd from './svg/0wind.svg';
-import overcast from './svg/04n.svg';
+import w03n from './svg/03n.svg';
+
 
 const Result = props => {
 
@@ -38,9 +37,9 @@ const Result = props => {
     if (!err && city) {
         const sunriseTime = new Date(sunrise * 1000).toLocaleTimeString()
         const sunsetTime = new Date(sunset * 1000).toLocaleTimeString()
-    
-    let image = img+".svg";
 
+        let image = 'w' + img ;
+        
         content = (
             <>  
                 <div className="h1 city-name">
@@ -62,10 +61,10 @@ const Result = props => {
                     </div>
                     <div className="details col-md">
                         <p className="image col text-center">
-                            <img src={overcast} alt={description}></img>
+                            <img src={image.toString} alt={description}></img>
                         </p>
-                        <h5>Sunrise: {sunriseTime}</h5>
-                        <h5>Sunset: {sunsetTime}</h5>
+                        <h5><img className="sunrisesvg" src={sunrisee} alt="sunrise"></img>{sunriseTime}</h5>
+                        <h5><img className="sunsetsvg" src={sunsett} alt="sunset"></img>{sunsetTime}</h5>
                     </div>
                 </section>
                 <section className="forecast-weather">
