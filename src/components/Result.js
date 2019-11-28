@@ -3,8 +3,25 @@ import humidityy from './svg/0humidity.svg';
 import sunrisee from './svg/0sunrise.svg';
 import sunsett from './svg/0sunset.svg';
 import windd from './svg/0wind.svg';
-import w03n from './svg/03n.svg';
 
+import w01d from './svg/01d.svg';
+import w01n from './svg/01n.svg';
+import w02d from './svg/02d.svg';
+import w02n from './svg/02n.svg';
+import w03d from './svg/03d.svg';
+import w03n from './svg/03n.svg';
+import w04d from './svg/04d.svg';
+import w04n from './svg/04n.svg';
+import w09d from './svg/09d.svg';
+import w09n from './svg/09n.svg';
+import w10d from './svg/10d.svg';
+import w10n from './svg/10n.svg';
+import w11d from './svg/11d.svg';
+import w11n from './svg/11n.svg';
+import w13d from './svg/13d.svg';
+import w13n from './svg/13n.svg';
+import w50d from './svg/50d.svg';
+import w50n from './svg/50n.svg';
 
 const Result = props => {
 
@@ -17,6 +34,11 @@ const Result = props => {
         err} = props.weather;
 //--Startowy stan aplikacji--//
     let content = null;
+//--WYświetlanie ikony pogody--//
+    var picture = "w" + img;
+    var icons = [w01d, w01n, w02d, w02n, w03d, w03n, w04d, w04n, w09d, w09n, w10d, w10n, w11d, w11n, w13d, w13n, w50d, w50n];
+    icons[picture];
+    
 //--Dane potrzebne do prawidłowego wyświetlania prognozy--//
     var myDateOne = new Date(dayNameOne);
     var myDateTwo = new Date(dayNameTwo);
@@ -37,9 +59,7 @@ const Result = props => {
     if (!err && city) {
         const sunriseTime = new Date(sunrise * 1000).toLocaleTimeString()
         const sunsetTime = new Date(sunset * 1000).toLocaleTimeString()
-
-        let image = 'w' + img ;
-        
+    
         content = (
             <>  
                 <div className="h1 city-name">
@@ -61,7 +81,7 @@ const Result = props => {
                     </div>
                     <div className="details col-md">
                         <p className="image col text-center">
-                            <img src={image.toString} alt={description}></img>
+                            <img src ={w10n} alt={description}></img>
                         </p>
                         <h5><img className="sunrisesvg" src={sunrisee} alt="sunrise"></img>{sunriseTime}</h5>
                         <h5><img className="sunsetsvg" src={sunsett} alt="sunset"></img>{sunsetTime}</h5>
@@ -92,7 +112,7 @@ const Result = props => {
 //--"city" pobiera z .catch--//
     return (
         <div className="result container text-center"> 
-            {err ? `Not found ${city}` : content} 
+            {err ? `Not found ${city}` : content}
         </div>
     );
 };
