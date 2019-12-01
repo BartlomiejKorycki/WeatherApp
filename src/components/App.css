@@ -51,7 +51,9 @@ h5 {
     width: 40%;
 }
 /*------*/
-
+.picturesvg {
+    width: 30%;
+}
 .windsvg {
     width: 20%;
 }

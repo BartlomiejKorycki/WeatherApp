@@ -26,7 +26,7 @@ import w50n from './svg/50n.svg';
 const Result = props => {
 
     const {
-        city, sunrise, sunset, temp, humidity, pressure, wind, description, img, 
+        city, sunrise, sunset, temp, humidity, pressure, wind, description, img,
         dayNameOne, forecastFirstDay,forecastFirstNight,
         dayNameTwo,forecastSecondDay,forecastSecondNight,
         dayNameThree,forecastThirdDay,forecastThirdNight,
@@ -35,10 +35,10 @@ const Result = props => {
 //--Startowy stan aplikacji--//
     let content = null;
 //--WYświetlanie ikony pogody--//
-    var picture = "w" + img;
-    var icons = [w01d, w01n, w02d, w02n, w03d, w03n, w04d, w04n, w09d, w09n, w10d, w10n, w11d, w11n, w13d, w13n, w50d, w50n];
-    icons[picture];
-    
+    var nameOfindex = "w" + img;
+    let icons = ["w01d", w01d, "w01n", w01n, "w02d", w02d,"w02n", w02n,"w03d", w03d,"w03n", w03n,"w04d", w04d,"w04n", w04n,"w09d", w09d,"w09n", w09n,"w10d", w10d, "w10n", w10n,"w11d", w11d,"w11n", w11n,"w13d", w13d,"w13n", w13n,"w50d", w50d,"w50n", w50n];
+    var numberOfindex = icons.indexOf(nameOfindex);
+    let picture = numberOfindex + 1;
 //--Dane potrzebne do prawidłowego wyświetlania prognozy--//
     var myDateOne = new Date(dayNameOne);
     var myDateTwo = new Date(dayNameTwo);
@@ -51,9 +51,8 @@ const Result = props => {
     var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 //--Zaokrąglenia--//
     var number = temp;
-    var roundedNumber = Math.round(number, 0);
-
     var windy = wind;
+    var roundedNumber = Math.round(number, 0);
     var roundedWind = Math.round(windy, 0);
 //--Jeżeli nie ma błędu i jest podane city to...--//
     if (!err && city) {
@@ -81,7 +80,7 @@ const Result = props => {
                     </div>
                     <div className="details col-md">
                         <p className="image col text-center">
-                            <img src ={w10n} alt={description}></img>
+                            <img className="picturesvg" src ={icons[picture]} alt={description}></img>
                         </p>
                         <h5><img className="sunrisesvg" src={sunrisee} alt="sunrise"></img>{sunriseTime}</h5>
                         <h5><img className="sunsetsvg" src={sunsett} alt="sunset"></img>{sunsetTime}</h5>
