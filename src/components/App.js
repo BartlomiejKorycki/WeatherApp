@@ -71,7 +71,7 @@ class App extends Component {
     //const APIa =`http://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&APPID=${APIKey}&units=metric`;
 
  //--Adres API przewidywanej pogody--//
-    const APIf =`http://api.openweathermap.org/data/2.5/forecast?q=${this.state.value}&APPID=${APIKey}&units=metric`;
+    const APIf =`https://api.openweathermap.org/data/2.5/forecast?q=${this.state.value}&APPID=${APIKey}&units=metric`;
 
     
 //--Wysyłanie żądania pod wskazany adres API(async)--//

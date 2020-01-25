@@ -36,7 +36,15 @@ const Result = props => {
     let content = null;
 //--WYświetlanie ikony pogody--//
     var nameOfindex = "w" + img;
-    let icons = ["w01d", w01d, "w01n", w01n, "w02d", w02d,"w02n", w02n,"w03d", w03d,"w03n", w03n,"w04d", w04d,"w04n", w04n,"w09d", w09d,"w09n", w09n,"w10d", w10d, "w10n", w10n,"w11d", w11d,"w11n", w11n,"w13d", w13d,"w13n", w13n,"w50d", w50d,"w50n", w50n];
+    let icons = ["w01d", w01d,"w01n", w01n,
+                 "w02d", w02d,"w02n", w02n,
+                 "w03d", w03d,"w03n", w03n,
+                 "w04d", w04d,"w04n", w04n,
+                 "w09d", w09d,"w09n", w09n,
+                 "w10d", w10d,"w10n", w10n,
+                 "w11d", w11d,"w11n", w11n,
+                 "w13d", w13d,"w13n", w13n,
+                 "w50d", w50d,"w50n", w50n];
     var numberOfindex = icons.indexOf(nameOfindex);
     let picture = numberOfindex + 1;
 //--Dane potrzebne do prawidłowego wyświetlania prognozy--//
