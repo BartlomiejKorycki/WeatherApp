@@ -7,10 +7,19 @@ body {
     color: black;
     background: url(topography.png);
 }
+/*---FORM-INPUT---*/
 .input-group {
     padding-top: 5%;
     margin: auto;
     width: 30%;
+}
+@media (max-width: 700px) {
+    .input-group {
+        padding-top: 7%;
+        padding-bottom: 7%;
+        margin: auto;
+        width: 80%;
+    }
 }
 /*---RESULT---*/
 .result {
