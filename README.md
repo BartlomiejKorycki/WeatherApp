@@ -1,6 +1,8 @@
 # Project No.5
 
 "Weather Application"
+Works on the visual layer in progress.
+
 
 Technology: 
 
